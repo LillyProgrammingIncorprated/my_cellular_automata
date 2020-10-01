@@ -90,13 +90,23 @@ void drawRightLine(int x, int y, int a, int b)
     ++x;
   }
 }
-void drawDiagonalLine(int x, int y, int a, int b)
+void drawDiagonalRightLine(int x, int y, int a, int b)
 {
   for (int i = 0; i < a; ++i)
   {
     Cells[y][x] = b;
     ++x;
     ++y;
+  }
+}
+
+void drawDiagonalLeftLine(int x, int y, int a, int b)
+{
+  for (int i = 0; i < a; ++i)
+  {
+    Cells[y][x] = b;
+    --x;
+    --y;
   }
 }
 
@@ -128,7 +138,7 @@ void EditGrid()
       while (a == 1)
       {
         int r;
-        std::cout << "Input 1 for manual editing. Input 2 to make a line that goes up from the beginning. Input 3 for a line that goes down. Input 4 for a line that goes right. Input 5 for a line that goes right. Input 6 for a diagonal line:  ";
+        std::cout << "Input 1 for manual editing. Input 2 to make a line that goes up from the beginning. Input 3 for a line that goes down. Input 4 for a line that goes right. Input 5 for a line that goes right. Input 6 for a diagonal right line Input 7 for a diagonal left line:  ";
         std::cin >> r;
         switch (r)
         {
@@ -226,7 +236,23 @@ void EditGrid()
 
             std::cout << "Input the binary value you want to give to the line:  ";
             std::cin >> b;
-            drawDiagonalLine(x, y, c, b);
+            drawDiagonalRightLine(x, y, c, b);
+            std::cout << "NEW GRID: " << std::endl;
+            PrintGrid();
+            break;
+          }
+            case 7:
+          {
+            std::cout << "Input the x coordinate of the beginning of the line:  ";
+            std::cin >> x;
+            std::cout << "Input the x coordinate of the beginning of the line:  ";
+            std::cin >> y;
+            std::cout << "Input the lenght of the line you want: ";
+            std::cin >> c;
+
+            std::cout << "Input the binary value you want to give to the line:  ";
+            std::cin >> b;
+            drawDiagonalLeftLine(x, y, c, b);
             std::cout << "NEW GRID: " << std::endl;
             PrintGrid();
             break;
