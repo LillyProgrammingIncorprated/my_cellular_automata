@@ -1,0 +1,1 @@
+The reason why it's called "NewProject.cpp" is because, before I coded that one, I started with another project, that I completely fucked up. So I started over with this one. The reason the original project was fucked up was due to my idiocy and my lack of proper understanding of the rules, which I later figured out and felt like a moron.
