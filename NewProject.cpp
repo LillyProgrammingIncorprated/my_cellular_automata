@@ -128,21 +128,29 @@ int EditGrid()
   std::cout << "CURRENT GRID: " << std::endl;
   PrintGrid();
   int x, y, a, b, c;
-  std::cout << "If you want to modify the grid, input 1. If you want to continue with the current grid, input 2:  ";
+  std::cout << "If you want to quit, input 0. If you want to modify the grid, input 1. If you want to continue with the current grid, input 2:  ";
   std::cin >> a;
 
 
   switch (a)
   {
+    case 0:
+    {
+      return 1;
+    }
     case 1:
     {
       while (a == 1)
       {
         int r;
-        std::cout << "Input 1 for manual editing. Input 2 to make a line that goes up from the beginning. Input 3 for a line that goes down. Input 4 for a line that goes right. Input 5 for a line that goes right. Input 6 for a diagonal right line. Input 7 for a diagonal left line:  ";
+        std::cout << "Input 0 to cancel. Input 1 for manual editing. Input 2 to make a line that goes up from the beginning. Input 3 for a line that goes down. Input 4 for a line that goes right. Input 5 for a line that goes right. Input 6 for a diagonal right line. Input 7 for a diagonal left line:  ";
         std::cin >> r;
         switch (r)
         {
+          case 0:
+            {
+              return 0;
+            }
           case 1:
           {
             std::cout << "Input the x coordinate of the cell you want to change:  ";
