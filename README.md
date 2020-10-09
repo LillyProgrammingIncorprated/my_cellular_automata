@@ -1,1 +1,2 @@
-The reason why it's called "NewProject.cpp" is because, before I coded that one, I started with another project, that I completely fucked up. So I started over with this one. The reason the original project was fucked up was due to my idiocy and my lack of proper understanding of the rules, which I later figured out and felt like a moron.
+This is the latest verion of my own Conway's Game of Life. It now has many features that I coded in with my own blood, sweat, and unbritled rage. Features such as a custom size grid; editing the custom grid: drawing lines in all directions directly from the program; choosing how many times the game should iterate, and many more! It's shit but it works. 
+TL;DR: It's just my own Game of Life I coded.
